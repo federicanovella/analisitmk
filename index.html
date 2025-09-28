@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Telemarketing - Analisi Mensile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Dashboard Telemarketing - Analisi Mensile</h1>
+            <div class="header-actions">
+                <button id="resetBtn" class="btn btn--outline btn--sm">Reset Dati</button>
+            </div>
+        </header>
+
+        <!-- Navigazione Tab -->
+        <nav class="tabs">
+            <button id="tabDati" class="tab-btn active">Inserimento Dati</button>
+            <button id="tabGrafici" class="tab-btn">Grafici</button>
+            <button id="tabFunnel" class="tab-btn">Funnel Analysis</button>
+            <button id="tabRiassunto" class="tab-btn">Dashboard Riassuntivo</button>
+        </nav>
+
+        <!-- Tab Inserimento Dati -->
+        <div id="contentDati" class="tab-content active">
+            <section class="data-input-section">
+                <h2>Inserimento Dati Mensili</h2>
+                <div class="months-grid" id="monthsContainer"></div>
+            </section>
+        </div>
+
+        <!-- Tab Grafici -->
+        <div id="contentGrafici" class="tab-content">
+            <section class="charts-section">
+                <h2>Analisi Grafici</h2>
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h3>Dettaglio Chiamate per Esito</h3>
+                        <div class="chart-controls">
+                            <div class="form-group">
+                                <label for="chiamateMonth">Visualizza:</label>
+                                <select id="chiamateMonth" class="select-input">
+                                    <option value="all">Tutti i Mesi</option>
+                                    <option value="Gennaio">Gennaio</option>
+                                    <option value="Febbraio">Febbraio</option>
+                                    <option value="Marzo">Marzo</option>
+                                    <option value="Aprile">Aprile</option>
+                                    <option value="Maggio">Maggio</option>
+                                    <option value="Giugno">Giugno</option>
+                                    <option value="Luglio">Luglio</option>
+                                    <option value="Agosto">Agosto</option>
+                                    <option value="Settembre">Settembre</option>
+                                    <option value="Ottobre">Ottobre</option>
+                                    <option value="Novembre">Novembre</option>
+                                    <option value="Dicembre">Dicembre</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div style="position: relative; height: 350px;">
+                            <canvas id="chiamateChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Appuntamenti Fissati vs Percorsi</h3>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="appuntamentiChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Potenziale Dichiarato Agenti (POD vs PDR)</h3>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="potenzialeChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>ROI Mensile (Fatturato vs Costi)</h3>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="roiChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Valore Economico Potenziali</h3>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="valorePotenzialiChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Distribuzione Esiti Chiamate</h3>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="esitiChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Tab Funnel Analysis -->
+        <div id="contentFunnel" class="tab-content">
+            <section class="funnel-section">
+                <h2>Funnel Analysis</h2>
+                <div class="funnel-controls">
+                    <div class="form-group">
+                        <label for="funnelMonth">Seleziona Mese per Funnel:</label>
+                        <select id="funnelMonth" class="select-input">
+                            <option value="all">Totale Anno</option>
+                            <option value="Gennaio">Gennaio</option>
+                            <option value="Febbraio">Febbraio</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Aprile">Aprile</option>
+                            <option value="Maggio">Maggio</option>
+                            <option value="Giugno">Giugno</option>
+                            <option value="Luglio">Luglio</option>
+                            <option value="Agosto">Agosto</option>
+                            <option value="Settembre">Settembre</option>
+                            <option value="Ottobre">Ottobre</option>
+                            <option value="Novembre">Novembre</option>
+                            <option value="Dicembre">Dicembre</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="funnel-container">
+                    <div class="funnel-chart">
+                        <div style="position: relative; height: 400px;">
+                            <canvas id="funnelChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="funnel-stats" id="funnelStats">
+                        <h3>Statistiche Funnel</h3>
+                        <div class="funnel-metrics" id="funnelMetrics"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Tab Dashboard Riassuntivo -->
+        <div id="contentRiassunto" class="tab-content">
+            <section class="summary-section">
+                <h2>Dashboard Riassuntivo</h2>
+
+                <!-- KPI Cards -->
+                <div class="kpi-grid" id="kpiContainer">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Tasso Conversione Medio</div>
+                        <div class="kpi-value" id="tassoConversioneKPI">0%</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Costo per Appuntamento</div>
+                        <div class="kpi-value" id="costoAppuntamentoKPI">€0</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Potenziale Totale Dichiarato</div>
+                        <div class="kpi-value" id="potenzialeTotaleKPI">€0</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">ROI Complessivo</div>
+                        <div class="kpi-value" id="roiKPI">0%</div>
+                    </div>
+                </div>
+
+                <!-- Tabella Riassuntiva -->
+                <div class="table-container">
+                    <h3>Tabella Riassuntiva Mensile</h3>
+                    <table class="summary-table" id="summaryTable">
+                        <thead>
+                            <tr>
+                                <th>Mese</th>
+                                <th>Chiamate Partite</th>
+                                <th>Chiamate Effettive</th>
+                                <th>App. Fissati</th>
+                                <th>App. Percorsi</th>
+                                <th>Amministratori Potenziali</th>
+                                <th>POD Potenziali</th>
+                                <th>PDR Potenziali</th>
+                                <th>Costo Tot.</th>
+                                <th>Potenziale €</th>
+                                <th>ROI %</th>
+                            </tr>
+                        </thead>
+                        <tbody id="summaryTableBody">
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Grafici Riassuntivi -->
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h3>Performance Complessiva</h3>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Andamento Potenziale Economico</h3>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="fatturatoChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
