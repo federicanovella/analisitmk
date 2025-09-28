@@ -1,14 +1,14 @@
 // ============================================
-// CONFIGURAZIONE GOOGLE SHEETS SYNC
+// CONFIGURAZIONE GOOGLE SHEETS SYNC v3.0
 // ============================================
 
 // ⚠️ IMPORTANTE: Sostituisci questi valori con i tuoi
 const GOOGLE_SHEETS_CONFIG = {
     // La tua API Key di Google Sheets (istruzioni sotto)
-    API_KEY: 'AIzaSyAdQr8GTshHJzCZ5sVjKU_WiuCPyXi9lqA',
+    API_KEY: 'YOUR_GOOGLE_SHEETS_API_KEY_HERE',
 
     // ID del tuo foglio Google Sheets (lo trovi nell'URL)
-    SPREADSHEET_ID: '143C8cSljgwMnY7R6fnGInco0SoXXyDaXKi4X-UJjo08',
+    SPREADSHEET_ID: 'YOUR_SPREADSHEET_ID_HERE',
 
     // Nome del foglio (tab) dove salvare i dati
     SHEET_NAME: 'TelemarketingData',
@@ -55,67 +55,35 @@ const SHEETS_STRUCTURE = {
     ]
 };
 
-// Export delle configurazioni (per uso nei moduli)
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        GOOGLE_SHEETS_CONFIG,
-        SYNC_CONFIG, 
-        SHEETS_STRUCTURE
-    };
-}
-
 // ============================================
-// 📋 ISTRUZIONI PER CONFIGURARE L'API
+// 📋 ISTRUZIONI SETUP GOOGLE SHEETS API
 // ============================================
 
 /*
 
-🔧 SETUP GOOGLE SHEETS API - PASSO PASSO:
+🚀 SETUP RAPIDO (5 MINUTI):
 
-1. VAI SU GOOGLE CLOUD CONSOLE:
-   https://console.cloud.google.com/
+1️⃣ GOOGLE CLOUD CONSOLE:
+   • Vai su: https://console.cloud.google.com/
+   • Crea progetto "Cruscotto Telemarketing"
+   • Abilita "Google Sheets API" 
+   • Crea "API Key"
+   • COPIA la chiave e SOSTITUISCI sopra
 
-2. CREA UN PROGETTO (se non ne hai uno):
-   • Clicca "Nuovo Progetto"
-   • Nome: "Cruscotto Telemarketing"
-   • Clicca "Crea"
+2️⃣ GOOGLE SHEETS:
+   • Vai su: https://sheets.google.com
+   • Crea nuovo foglio
+   • Rinomina in "TelemarketingData"
+   • COPIA l'ID dall'URL e SOSTITUISCI sopra
+   • Rendi pubblico: Condividi > "Chiunque con link può visualizzare"
 
-3. ABILITA GOOGLE SHEETS API:
-   • Vai su "API e Servizi" > "Libreria"
-   • Cerca "Google Sheets API"
-   • Clicca "Abilita"
-
-4. CREA UNA API KEY:
-   • Vai su "Credenziali"
-   • Clicca "Crea credenziali" > "Chiave API"
-   • Copia la chiave generata
-   • INCOLLA QUI SOPRA in API_KEY
-
-5. CREA IL FOGLIO GOOGLE SHEETS:
-   • Vai su sheets.google.com
-   • Clicca "Nuovo foglio"
-   • Rinomina il foglio in "TelemarketingData"
-   • Dall'URL copia l'ID: 
-     https://docs.google.com/spreadsheets/d/[QUESTO_È_L_ID]/edit
-   • INCOLLA QUI SOPRA in SPREADSHEET_ID
-
-6. RENDI PUBBLICO IL FOGLIO:
-   • Nel foglio Google Sheets clicca "Condividi"
-   • In "Ottieni link" seleziona "Chiunque con il link può visualizzare"
-   • Clicca "Copia link" (NON serve il link, solo renderlo pubblico)
-
-7. TESTA LA CONFIGURAZIONE:
-   • Apri il cruscotto
-   • Se vedi "🟢 Connected" sei a posto!
-   • Se vedi errori, controlla API Key e Spreadsheet ID
+3️⃣ TEST:
+   • Apri index.html
+   • Vedi "🟢 Sync" = PERFETTO!
+   • Vedi "📴 Offline Mode" = Non configurato (normale)
 
 🎯 RISULTATO: 
-Il cruscotto si sincronizza automaticamente con Google Sheets!
-Puoi accedere da qualsiasi dispositivo e i dati sono sempre aggiornati.
-
-⚠️ SICUREZZA:
-• La API Key è pubblica ma limitata solo ai fogli pubblici
-• I tuoi dati sono sicuri su Google Sheets 
-• Solo chi ha il link al cruscotto può vedere i dati
+Multi-dispositivo automatico! 
+Computer/telefono/tablet sempre sincronizzati!
 
 */
