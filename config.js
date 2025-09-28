@@ -11,7 +11,7 @@ const GOOGLE_SHEETS_CONFIG = {
     SPREADSHEET_ID: '143C8cSljgwMnY7R6fnGInco0SoXXyDaXKi4X-UJjo08',
 
     // Nome del foglio (tab) dove salvare i dati
-    SHEET_NAME: 'TelemarketingData',
+    SHEET_NAME: 'Foglio1',
 
     // Range dove scrivere i dati (A1:Z100 copre tutto)
     RANGE: 'A1:Z100'
