@@ -1,86 +1,77 @@
-CRUSCOTTO TELEMARKETING v3.0 - GOOGLE SHEETS SYNC! 🚀
+CRUSCOTTO TELEMARKETING v2.2 - GRAFICI AGGIORNATI
 
-✨ NOVITÀ: Sincronizzazione automatica multi-dispositivo!
+🎯 MODIFICHE v2.2: Grafici chiamate e funnel ottimizzati
 
-📁 CONTENUTO FILES:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-✅ index.html    - Interfaccia completa (identica + sync)
-✅ style.css     - Stili identici + indicatori sync  
-✅ config.js     - Configurazione Google Sheets 
-✅ app.js        - Logica completa con sync (25KB)
-✅ README.txt    - Queste istruzioni
+CONTENUTO:
+- index.html: File principale aggiornato con nuovi controlli
+- style.css: Stili aggiornati per i controlli grafici
+- app.js: Logica completamente aggiornata per nuovi grafici
+- README.txt: Questo file
 
-🎯 DOVE CARICARE I FILE:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🆕 NOVITÀ v2.2:
 
-❌ NON su Google Drive!
-✅ Su GitHub Pages (che hai già attivo!)
+📊 GRAFICO CHIAMATE COMPLETAMENTE RINNOVATO:
+✅ Trasformato da linea a istogrammi per maggiore dettaglio
+✅ 3 dataset separati: 
+   • Chiamate Partite (grigio scuro)
+   • Non Interessato (teal/azzurro) 
+   • Appuntamenti Presi (verde)
+✅ Selettore "Tutti i Mesi" vs singolo mese
+✅ Titolo cambiato: "Dettaglio Chiamate per Esito"
+✅ Visualizzazione flessibile: panoramica annuale o focus mensile
 
-🚀 PROCEDIMENTO COMPLETO:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📈 FUNNEL ANALYSIS OTTIMIZZATO:
+✅ Ridotto da 5 a 4 step per maggiore chiarezza
+✅ Eliminato "Totale Acquisito Potenziale" per focus sulla conversione
+✅ Flusso ottimizzato: Chiamate Partite → Chiamate Effettive → App. Fissati → App. Percorsi
+✅ Nuove statistiche:
+   • Tasso Efficacia Chiamate
+   • Resa Complessiva (es: "15 su 200 chiamate")
+   • Conversione Finale più visibile
+✅ Grafico più pulito e immediato da leggere
 
-1️⃣ SCARICA QUESTO ZIP:
-   ✅ Clicca sul file ZIP
-   ✅ Scarica sul computer
+💾 SISTEMA DI SALVATAGGIO AVANZATO (mantenuto):
+✅ AUTO-SALVATAGGIO: I dati si salvano ogni 30 secondi
+✅ COMPATIBILITÀ: Migrazione automatica da versioni precedenti
+✅ BACKUP: Pulsanti per esportare/importare JSON
+✅ REPORT CSV: Export completo per Excel
 
-2️⃣ ESTRAI I FILE:
-   ✅ Clicca destro → "Estrai tutto"
-   ✅ Vedrai 5 file
+🚀 COME USARE LE NUOVE FUNZIONALITÀ:
 
-3️⃣ CARICA SU GITHUB:
-   ✅ Vai su: https://github.com/federicanovella/analisitmk
-   ✅ Clicca "Upload files"
-   ✅ Trascina tutti i 5 file
-   ✅ Clicca "Commit changes"
+GRAFICO CHIAMATE:
+1. Vai nel tab "Grafici"
+2. Nel primo grafico, usa il menu a tendina "Visualizza:"
+3. Scegli "Tutti i Mesi" per panoramica completa
+4. Scegli un mese specifico (es: "Gennaio") per dettaglio singolo
+5. Osserva i 3 colori: chiamate partite, non interessato, appuntamenti presi
 
-4️⃣ TESTA ONLINE:
-   ✅ Vai su: https://federicanovella.github.io/analisitmk
-   ✅ Dovresti vedere: "📴 Offline Mode" = FUNZIONA!
+FUNNEL ANALYSIS:
+1. Vai nel tab "Funnel Analysis"
+2. Il grafico ora mostra chiaramente il flusso a 4 step
+3. Osserva come si restringe da chiamate partite ad appuntamenti percorsi
+4. Le statistiche a destra mostrano i tassi di conversione esatti
+5. "Resa Complessiva" ti dice quanti appuntamenti ottenuti su totale chiamate
 
-5️⃣ CONFIGURA GOOGLE SHEETS (opzionale):
-   ✅ Per sync multi-dispositivo
-   ✅ Segui istruzioni in config.js (5 minuti)
+🎯 BENEFICI DELLE MODIFICHE:
+• Grafico chiamate più informativo e flessibile
+• Funnel più pulito e focalizzato sulla performance
+• Migliore comprensione del ROI del telemarketing
+• Analisi più granulare per ottimizzare le campagne
+• Visualizzazione immediata dell'efficacia commerciale
 
-🎯 STATI POSSIBILI:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📊 METRICHE MIGLIORATE:
+- Tasso Efficacia Chiamate: % di chiamate che generano interazione
+- Conversione per Fase: visione dettagliata di ogni step
+- Resa Complessiva: rapporto finale chiamate/risultati
+- Performance per Esito: quante chiamate per tipo di risultato
 
-📴 Offline Mode     = Funziona perfettamente (localStorage)
-🔄 Connecting...    = Sta configurando Google Sheets  
-🟢 Sync 15:30      = Multi-dispositivo attivo!
-❌ Sync Error      = Controlla config.js
+🔄 COMPATIBILITÀ:
+✅ I dati esistenti funzionano perfettamente
+✅ Migrazione automatica da versioni precedenti  
+✅ Mantiene tutti i salvataggi e backup
+✅ Zero perdite di dati
 
-💡 IMPORTANTE:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Versione: v2.2 - Grafici ottimizzati
+Data: 28 settembre 2025
 
-✅ IDENTICO graficamente alla versione precedente!
-✅ Solo aggiunto piccolo indicatore sync
-✅ Compatibile con tutti i dati esistenti
-✅ Funziona anche offline se Google Sheets non configurato
-
-🌐 VANTAGGI SYNC MULTI-DISPOSITIVO:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-🏠 CASA:     Inserisci dati gennaio su computer
-📱 TELEFONO: Vedi grafici aggiornati su mobile  
-🏢 UFFICIO:  Continua con febbraio su laptop
-👥 TEAM:     Condividi link, tutti vedono stessi dati
-
-🔧 CONFIGURAZIONE GOOGLE SHEETS (OPZIONALE):
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-1. Apri config.js
-2. Segui istruzioni dettagliate (5 minuti)
-3. Sostituisci API_KEY e SPREADSHEET_ID
-4. Boom! Sync automatico per sempre
-
-✅ UNA VOLTA CARICATO SU GITHUB:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-🌐 Funziona da qualsiasi dispositivo
-📱 Stesso link per tutti
-🔄 Aggiornamenti automatici
-💾 Backup sicuri
-
-Version: v3.0 - Google Sheets Sync
-Author: Perplexity AI per Federica Novella
-Date: 28 settembre 2025
+🎉 Ora hai una visione molto più chiara e dettagliata delle performance del tuo telemarketing!
