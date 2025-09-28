@@ -5,10 +5,10 @@
 // ⚠️ IMPORTANTE: Sostituisci questi valori con i tuoi
 const GOOGLE_SHEETS_CONFIG = {
     // La tua API Key di Google Sheets (istruzioni sotto)
-    API_KEY: 'YOUR_GOOGLE_SHEETS_API_KEY_HERE',
+    API_KEY: 'AIzaSyAdQr8GTshHJzCZ5sVjKU_WiuCPyXi9lqA',
 
     // ID del tuo foglio Google Sheets (lo trovi nell'URL)
-    SPREADSHEET_ID: 'YOUR_SPREADSHEET_ID_HERE',
+    SPREADSHEET_ID: '143C8cSljgwMnY7R6fnGInco0SoXXyDaXKi4X-UJjo08',
 
     // Nome del foglio (tab) dove salvare i dati
     SHEET_NAME: 'TelemarketingData',
