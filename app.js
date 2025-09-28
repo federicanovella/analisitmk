@@ -44,8 +44,8 @@ class TelemarketingDashboard {
     async initializeGoogleSheetsSync() {
         try {
             if (typeof GOOGLE_SHEETS_CONFIG === 'undefined' || 
-                GOOGLE_SHEETS_CONFIG.API_KEY === 'AIzaSyAr8PB5v3s1H6xLo-UoMLgflOIztCGteaw' ||
-                GOOGLE_SHEETS_CONFIG.SPREADSHEET_ID === '143C8cSljgwMnY7R6fnGInco0SoXXyDaXKi4X-UJjo08') {
+                GOOGLE_SHEETS_CONFIG.API_KEY === 'YOUR_GOOGLE_SHEETS_API_KEY_HERE' ||
+                GOOGLE_SHEETS_CONFIG.SPREADSHEET_ID === 'YOUR_SPREADSHEET_ID_HERE') {
 
                 console.warn('⚠️ Google Sheets non configurato. Usando solo localStorage.');
                 this.setSyncStatus('offline');
